@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resturant abdalghany</title>
+    <!-- main template css file -->
+    <link rel="stylesheet" href="menu2 css/drinks.css">
+    <script src="drinks.js"></script>
+
+</head>
+<body>
+    <header>
+      <p class="logo">The Drinks Menu</p>
+    </header>
+
+    <div class="item">
+    <img title="Caramel Macchiato" src="images menu2/كراميل ميكاتو.webp" alt="Caramel Macchiato"> 
+    <p>Caramel Macchiato</p>
+    <p><mark>price:</mark><del>50$</del> <b>40$</b></p>
+    <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+    <button onclick="addToInvoice('Caramel Macchiato', 40)"><b>add to cart</b></button>
+    </div>
+   
+   
+    <div class="item">
+    <img title="Espresso" src="images menu2/اسبريسو.webp" alt="Espresso">
+    <p>Espresso</p>
+    <p><mark>price:</mark><b>30$</b></p>
+    <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+    <button onclick="addToInvoice( 'Espresso', 30)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="ice latte" src="images menu2/ايس لاتيه.webp" alt="ice latte">
+      <p>ice latte</p>
+      <p><mark>price:</mark><b>35$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('ice latte', 35)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="Spanish latte" src="images menu2/سبانيش لاتيه.webp" alt="Spanish latte">
+      <p>Spanish latte</p>
+      <p><mark>price:</mark><b>20$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('Spanish latte', 20)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="Saudi coffee" src="images menu2/قهوه سعودي.webp" alt="Saudi coffee">
+      <p>Saudi coffee</p>
+      <p><mark>price:</mark><b>20$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('Saudi coffee', 20)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="Mojito" src="images menu2/موهيتو.jpg" alt="Mojito">
+    <p>Mojito</p>
+      <p><mark>price:</mark><b>20$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('Mojito', 20)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="hot chocolate" src="images menu2/هوت تشوكلت.webp" alt="hot chocolate">
+    <p>hot chocolate</p>
+      <p><mark>price:</mark><b>25$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('hot chocolate', 25)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="latte Caramel" src="images menu2/لاتيه كراميل.webp" alt="latte Caramel">
+    <p>latte Caramel</p>
+      <p><mark>price:</mark><b>20$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('latte Caramel', 20)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="Italian coffee" src="images menu2/قهو ايطالي.jpg" alt="Italian coffee">
+    <p>Italian coffee</p>
+      <p><mark>price:</mark><b>30$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('Italian coffee', 30)"><b>add to cart</b></button>
+    </div>
+    <div class="item">
+      <img title="Cold mocha" src="images menu2/موكا بارد.webp" alt="Cold mocha">
+    <p>Cold mocha</p>
+      <p><mark>price:</mark><del>25$</del><b>15$</b></p>
+      <!-- <p> <a href="javascript:alert('done');">buy now</a></p> -->
+      <button onclick="addToInvoice('Cold mocha', 15)"><b>add to cart</b></button>
+    </div>
+    <div id="invoice"> <!-- قسم عرض الفاتورة -->
+      <h2>cart</h2> <!-- عنوان الفاتورة -->
+      <ul id="invoice-list"></ul> <!-- قائمة المشتريات -->
+      <p><strong>the total: </strong><span id="total">0</span> pound</p> <!-- عرض المجموع الكلي -->
+      <!-- <button id="printBtn" onclick="window.print()">طباعة الفاتورة</button> زر الطباعة -->
+      <p> <a class="buy" href="javascript:alert('Purchase completed');">buy now</a></p>
+  </div>
+  
+   
+    
+</body>
+</html>
+

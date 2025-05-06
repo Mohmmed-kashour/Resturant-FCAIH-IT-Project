@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu2 css/desserts.css">
+    <script src="desserts.js"></script>
+</head>
+<body>
+    <header>
+        <p class="logo">The Desserts Menu</p>
+    </header>
+
+     <div class="item">
+        <img title="Tiramisu" src="images menu2/تيراميسو.webp" alt="Tiramisu"> 
+        <p>Tiramisu</p>
+        <p><mark>price:</mark><del>40$</del> <b>30$</b></p>
+        <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+        <button onclick="addToInvoice('Tiramisu', 30)">add to cart</button>
+    </div>
+     <div class="item">
+        <img title="French toast-chocolate" src="images menu2/فرانش توست-شوكولاته.jpg" alt="French toast-chocolate"> 
+        <p>French toast-chocolate</p>
+        <p><mark>price:</mark><del>30$</del> <b>25$</b></p>
+        <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+        <button onclick="addToInvoice('French toast-chocolate', 25)">add to cart</button>
+    </div>
+     <div class="item">
+        <img title="French Donut" src="images menu2/فرانش دونات(محشيه).webp" alt="French Donut"> 
+        <p>French Donut</p>
+        <p><mark>price:</mark> <b>30$</b></p>
+        <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+        <button onclick="addToInvoice('French Donut', 30)">add to cart</button>
+    </div>
+     <div class="item">
+        <img title="Classic crepe" src="images menu2/كريب كلاسيك.jpg" alt="Classic crepe"> 
+        <p>Classic crepe</p>
+        <p><mark>price:</mark><del>50$</del> <b>40$</b></p>
+        <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+        <button onclick="addToInvoice('Classic crepe', 40)">add to cart</button>
+    </div>
+    <div class="item">
+        <img title="Kinder Creping Roll" src="images menu2/كريبنج رول كيندر.webp" alt="Kinder Creping Roll"> 
+        <p>Kinder Creping Roll</p>
+        <p><mark>price:</mark> <b>50$</b></p>
+        <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+        <button onclick="addToInvoice('Kinder Creping Roll', 50)">add to cart</button>
+    </div>
+
+
+    <div class="item">
+        <img title="Waffle" src="images menu2/وافل.webp" alt="Waffle"> 
+        <p>Waffle</p>
+        <p><mark>price:</mark><b>45$</b></p>
+        <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+        <button onclick="addToInvoice('Waffle', 45)">add to cart</button>
+    </div>
+    <div class="item">
+        <img title="Waffle fries" src="images menu2/وافل فرايز.webp" alt="Waffle fries"> 
+        <p>Waffle fries</p>
+        <p><mark>price:</mark><b>45$</b></p>
+        <!-- <p> <a class="buy" href="javascript:alert('done');">buy now</a></p> -->
+        <button onclick="addToInvoice('Waffle fries', 45)">add to cart</button>
+    </div>
+    <div id="invoice"> <!-- قسم عرض الفاتورة -->
+        <h2>cart</h2> <!-- عنوان الفاتورة -->
+        <ul id="invoice-list"></ul> <!-- قائمة المشتريات -->
+        <p><strong>the total: </strong><span id="total">0</span> pound</p> <!-- عرض المجموع الكلي -->
+        <!-- <button id="printBtn" onclick="window.print()">طباعة الفاتورة</button> زر الطباعة -->
+        <p> <a class="buy" href="javascript:alert('Purchase completed');">buy now</a></p>
+    </div>
+
+</body>
+</html>
