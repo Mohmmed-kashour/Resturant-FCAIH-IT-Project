@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservation</title>
+  <link rel="stylesheet" href="book.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <button class="btn">Reserve Now</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p>Enjoy great food, great drinks, and a cozy atmosphere.</p>
+      <button class="btn">Book a Table</button>
+    </div>
+  </section>
+
+  <section class="booking-container" aria-label="Table booking form">
+    <form>
+      <div>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your full name" required autocomplete="name" />
+      </div>
+
+      <div>
+        <label for="date">Reservation Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div>
+        <label for="time">Reservation Time</label>
+        <input type="time" id="time" name="time" min="17:00" max="23:00" required />
+      </div>
+
+      <div>
+        <label for="guests">Number of Guests</label>
+        <select id="guests" name="guests" required>
+          <option value="" disabled selected>Select guests</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5+">5+</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Reserve Now</button>
+    </form>
+  </section>
+
+  <script src="booking.js"></script>
+</body>
+</html>
