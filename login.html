@@ -13,14 +13,12 @@
             position: relative;
         }
 
-        /* Adding a semi-transparent background overlay */
         body::before {
             content: "";
-            background-image: url(img/pepsi-jj.jpg);
+            background-image: url(img/gallery1.jpeg);
             background-size: cover;
             background-position: center;
             opacity: 0.2;
-            /* Adjust opacity here - lower value = more transparent */
             position: absolute;
             top: 0;
             left: 0;
@@ -39,7 +37,6 @@
             width: 50%;
             padding: 2rem;
             display: flex;
-            margin: auto;
             height: 100vh;
             align-items: center;
             flex-direction: column;
@@ -51,7 +48,6 @@
             padding: 20px;
             width: 50%;
             background-color: rgba(21, 20, 20, 0.9);
-            /* Semi-transparent background */
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
@@ -65,38 +61,35 @@
         .login-box input[type="password"] {
             padding: 10px;
             margin-top: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             border-radius: 4px;
             border: 1px solid #333;
         }
 
         .submit {
-            background-color: rgb(249, 89, 30);
+            background-color: red;
             width: 170px;
             padding: 10px;
             color: white;
             border: none;
             border-radius: 4px;
-
             margin: 10px 0;
-
         }
 
-
-        /* .image-container {
+        .image-container {
             width: 50%;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-        } */
+        }
 
-        /* .imge {
+        .imge {
             width: 80%;
             height: 80%;
             display: block;
-        } */
+        }
 
         a {
             color: azure;
@@ -107,22 +100,31 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
     </style>
 
-    <title>login</title>
+    <title>Login</title>
 </head>
 
 <body>
-    
+    <div class="main-contain">
+        <div class="image-container"></div>
         <div class="login-box">
             <div class="login-containt">
                 <h1>Login</h1>
-                <form>
+                <form id="myForm">
                     <label for="Email">Email</label>
-                    <input id="Email" required type="email" placeholder="Enter your Email">
+                    <input id="Email" type="email" placeholder="Enter your Email">
+                    <div id="emailError" class="error"></div>
 
                     <label for="password">Password</label>
-                    <input id="password" required type="password" placeholder="Enter your password">
+                    <input id="password" type="password" placeholder="Enter your password">
+                    <div id="passwordError" class="error"></div>
 
                     <a href="./contact.html">Forget password?</a>
 
@@ -133,41 +135,40 @@
             </div>
         </div>
     </div>
-    <!-- هنا بنضيف كود الجافاسكريبت -->
+
     <script>
-        // بنمسك الفورم ونضيف عليه مستمع للحدث submit
-        document.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault(); // نمنع الإرسال التلقائي للفورم
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-            // نفضي أي رسائل خطأ قبل التحقق
-            let oldErrors = document.querySelectorAll(".error-message");
-            oldErrors.forEach(err => err.remove());
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
 
-            // نجيب القيم اللي دخلها المستخدم
+            let valid = true;
+
             const email = document.getElementById("Email").value.trim();
             const password = document.getElementById("password").value;
 
-            // نتحقق من صحة الإيميل
-            if (email === "" || !/\S+@\S+\.\S+/.test(email)) {
-                const error = document.createElement("div");
-                error.className = "error-message";
-                error.style.color = "red";
-                error.innerText = "من فضلك أدخل بريد إلكتروني صحيح";
-                document.getElementById("Email").after(error);
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required.";
+                valid = false;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById("emailError").innerText = "Enter a valid email.";
+                valid = false;
             }
 
-            // نتحقق من الباسورد
             if (password.length < 6) {
-                const error = document.createElement("div");
-                error.className = "error-message";
-                error.style.color = "red";
-                error.innerText = "كلمة المرور لازم تكون 6 حروف على الأقل";
-                document.getElementById("password").after(error);
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+                valid = false;
             }
 
-
+            if (valid) {
+                alert("Form is valid and ready to be submitted!");
+            }
         });
     </script>
+</body>
+
+</html>
 
 
 
