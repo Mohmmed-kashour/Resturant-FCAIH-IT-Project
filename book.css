@@ -13,6 +13,7 @@ body {
 .booking-container {
   background: rgba(30, 30, 30, 0.85);
   padding: 2.5rem 3rem;
+  margin: 250px 0 0 500px;
   border-radius: 20px;
   max-width: 400px;
   width: 100%;
