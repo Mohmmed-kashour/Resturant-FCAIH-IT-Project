@@ -1,4 +1,4 @@
-// ربط أزرار التالي والسابق
+
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 

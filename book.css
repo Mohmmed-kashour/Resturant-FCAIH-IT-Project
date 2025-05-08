@@ -1,3 +1,4 @@
+
 /* Apply background image */
 body {
   margin: 0;
@@ -5,7 +6,7 @@ body {
   height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
-  background-image: url("imghome/food-photography-background.jpg.jpg");
+  background-image: url("imgtable/AdobeStock_324727233_Preview.jpeg");
   background-size: cover;
 }
 
