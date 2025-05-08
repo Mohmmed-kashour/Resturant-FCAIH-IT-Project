@@ -12,13 +12,14 @@
             background-color: black;
             position: relative;
         }
-
+        
+        /* Adding a semi-transparent background overlay */
         body::before {
             content: "";
             background-image: url(img/gallery1.jpeg);
             background-size: cover;
             background-position: center;
-            opacity: 0.2;
+            opacity: 0.2; /* Adjust opacity here - lower value = more transparent */
             position: absolute;
             top: 0;
             left: 0;
@@ -42,12 +43,12 @@
             flex-direction: column;
             justify-content: center;
         }
-
+        
         .login-containt {
             border: 1px solid gray;
             padding: 20px;
             width: 50%;
-            background-color: rgba(21, 20, 20, 0.9);
+            background-color: rgba(21, 20, 20, 0.9); /* Semi-transparent background */
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
@@ -61,7 +62,7 @@
         .login-box input[type="password"] {
             padding: 10px;
             margin-top: 5px;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             border-radius: 4px;
             border: 1px solid #333;
         }
@@ -73,8 +74,11 @@
             color: white;
             border: none;
             border-radius: 4px;
+            
             margin: 10px 0;
+            
         }
+        
 
         .image-container {
             width: 50%;
@@ -91,7 +95,7 @@
             display: block;
         }
 
-        a {
+         a {
             color: azure;
             text-decoration: none;
             margin: 5px 0;
@@ -99,32 +103,29 @@
 
         a:hover {
             text-decoration: underline;
-        }
-
-        .error {
-            color: red;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
+        } 
     </style>
 
-    <title>Login</title>
+    <title>Fast Food</title>
 </head>
 
 <body>
+    <div>
+        
+    </div>
     <div class="main-contain">
-        <div class="image-container"></div>
+        <div class="image-container">
+            
+        </div>
         <div class="login-box">
             <div class="login-containt">
                 <h1>Login</h1>
-                <form id="myForm">
+                <form>
                     <label for="Email">Email</label>
-                    <input id="Email" type="email" placeholder="Enter your Email">
-                    <div id="emailError" class="error"></div>
+                    <input id="Email" required type="email" placeholder="Enter your Email">
 
                     <label for="password">Password</label>
-                    <input id="password" type="password" placeholder="Enter your password">
-                    <div id="passwordError" class="error"></div>
+                    <input id="password" required type="password" placeholder="Enter your password">
 
                     <a href="./contact.html">Forget password?</a>
 
@@ -135,43 +136,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.getElementById("myForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            document.getElementById("emailError").innerText = "";
-            document.getElementById("passwordError").innerText = "";
-
-            let valid = true;
-
-            const email = document.getElementById("Email").value.trim();
-            const password = document.getElementById("password").value;
-
-            if (email === "") {
-                document.getElementById("emailError").innerText = "Email is required.";
-                valid = false;
-            } else if (!/\S+@\S+\.\S+/.test(email)) {
-                document.getElementById("emailError").innerText = "Enter a valid email.";
-                valid = false;
-            }
-
-            if (password.length < 6) {
-                document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
-                valid = false;
-            }
-
-            if (valid) {
-                alert("Form is valid and ready to be submitted!");
-            }
-        });
-    </script>
-</body>
-
-</html>
-
-
-
 </body>
 
 </html>
