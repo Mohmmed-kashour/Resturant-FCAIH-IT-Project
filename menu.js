@@ -1,4 +1,4 @@
-unction addToCart() {
+function addToCart() {
   let span = document.getElementById("itemsInCart"); // نجيب الـ span
   let currentNumber = parseInt(span.innerText);   // ناخد الرقم اللي جواه ونحوله لرقم حقيقي (مش نص)
   currentNumber += 1;                             // نزود 1
