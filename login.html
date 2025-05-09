@@ -167,24 +167,23 @@
     
         });
     </script>
-     
-        // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
-        fetch('navbar.html')
-    
-            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
-            .then(res => res.text())
-    
-            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            });
-    
+     <script>
+    // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+    fetch('navbar.html')
+
+        // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+        .then(res => res.text())
+
+        // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+</script>
+
+      
 </body>
 
 </html>
 
 
 
-</body>
-
-</html>
