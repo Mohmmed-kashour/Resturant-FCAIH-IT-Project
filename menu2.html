@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
+     <link rel="stylesheet" href="style.css">
     <!-- main template css file -->
     <link rel="stylesheet" href="menu2.css">
     
     
 </head>
 <body>
+       <!-- مكان تحميل الناف بار -->
+    <div id="navbar-placeholder"></div>
      <header>
        <p class="logo"> Menu - Food & Drinks & Desserts & Appetizers</p>
      </header>
@@ -29,6 +32,17 @@
         <a class="secfoods" href="menu.html"><p>Food section</p></a>
     </div>
 
-        
+    <script>
+        // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+        fetch('navbar.html')
+    
+            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+            .then(res => res.text())
+    
+            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>    
     
 
