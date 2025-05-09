@@ -11,7 +11,7 @@ body {
     justify-content: center;/* توسيط افقى */
     align-items: center;/* توسيط عمودى */
     min-height: 100vh;/* بيخلى الصفحه بطول الشاشه */
-    background-color: #ffe6e6;/* لون الخلفيه */
+    background-color: #1a1a12;/* لون الخلفيه */
 }
 
 .contact-container {
@@ -22,7 +22,7 @@ body {
 
 .contact-info {
     width: 40%;
-    background-color: #085658;
+    background-color: #9b540d;
     color: white;
     padding: 90px 30px;
     position: absolute;/* لتحديد مكانه بالظبط */           
@@ -92,7 +92,7 @@ textarea {
 }
 
 .submit-btn {
-    background-color: #085154;
+    background-color: #d27b1e;
     color: white;
     border: none;
     padding: 12px 30px;
