@@ -8,11 +8,14 @@
     <!-- عشان يشتغل على الموبايل والشاشات الصغيره -->
     <title>Contact Us Form</title><!-- عنوان الصفحه -->
     <link rel="stylesheet" href="contact.css"><!-- لربط ال css ب ال html -->
+     <link rel="stylesheet" href="style.css"> <!--عشان الناف بار تاخد نفس التنسيقات بتاع الhome page  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- عشان نستخدم ال font aussm -->
 </head>
 
 <body>
+     <!-- مكان تحميل الناف بار -->
+    <div id="navbar-placeholder"></div>
     <!-- الحاويه الرئسيه للصفحه -->
     <div class="contact-container">
 
@@ -82,6 +85,19 @@
             </div>
         </div>
     </div>
+    <script>
+    // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+    fetch('navbar.html')
+
+        // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+        .then(res => res.text())
+
+        // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+</script>
+
 </body>
 
 </html>
