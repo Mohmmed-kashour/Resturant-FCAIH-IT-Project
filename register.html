@@ -4,6 +4,7 @@
 <head>
     <meta charset="=UTF-8">
     <title>Register</title>
+    <link rel="stylesheet" href="style.css">
     <style>
          body {
             background-color:black;
@@ -12,7 +13,7 @@
         } 
         body::before {
             content: "";
-            background-image: url(img/pepsi-jj.jpg);
+            background-image: url(img/login.jpg);
             background-size: cover;
             background-position: center;
             opacity: 0.2; /* Adjust opacity here - lower value = more transparent */
@@ -71,6 +72,8 @@
 </head>
 
 <body>
+     <!-- مكان تحميل الناف بار -->
+     <div id="navbar-placeholder"></div>
     <div class="main-continer">
 
         <div class="register-box">
@@ -92,6 +95,18 @@
 
 
     </div>
+    <script>
+        // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+        fetch('navbar.html')
+    
+            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+            .then(res => res.text())
+    
+            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
 
 </body>
 
