@@ -34,7 +34,7 @@ body{
   
    }
    div{
-    margin: 30px 35px 30px 40px;
+    margin: 30px 45px 30px 45px;
     background-color: white;
     box-shadow: 1px 2px 30px 5px orange ;
     border-radius: 30px 90px 30px 90px;
@@ -63,9 +63,6 @@ img{
 #invoice{
     border-radius: 30px;
     display: inline-block;
-    position: fixed;
-    top: 250px;
-    right: 0;
 }
 .buy{
     text-decoration-line: none;
