@@ -8,11 +8,13 @@ body {
 .testimonial-section {
     text-align: center;
     padding: 20px;
+     margin: 100px 0 70px 0;
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    /*color: #333;*/
+    color: #ff9900;
 }
 
 .slider {
