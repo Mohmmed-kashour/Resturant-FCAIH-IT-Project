@@ -1,5 +1,5 @@
 
-html, body {
+/*html, body {
   overflow-x: hidden;
   overflow-y: auto;
   height: auto;
@@ -13,7 +13,7 @@ html, body {
 .menu-category {
   height: auto;
   min-height: 100vh;
-}
+}*/
 
 @media (max-width: 768px) {}
 
