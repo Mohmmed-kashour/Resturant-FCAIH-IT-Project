@@ -1,4 +1,128 @@
 <nav class="navbar">
+    
+    <style>
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 45px;
+        background-color: #333;
+        z-index: 1000;
+    }
+    
+    .logo {
+        font-size: 39px;
+        font-weight: bold;
+        color: #f70;
+        transition: 0.5s;
+    }
+    
+    .logo:hover {
+        letter-spacing: 1px;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 50px;
+        list-style: none;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .nav-links a:hover {
+        color: #f70;
+    }
+    
+    /* Dropdown styles */
+    .dropdown {
+        position: relative;
+    }
+    
+    .dropdown-content {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #4a4a4a;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        padding: 12px 0;
+        z-index: 1;
+        transform: translateY(20px);
+        transition: all 0.3s;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    
+    .dropdown-content li {
+        list-style: none;
+        padding: 8px 16px;
+    }
+    
+    .dropdown-content li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    
+    .dropdown-content li a:hover {
+        color: #f70;
+        padding-left: 5px;
+    }
+    
+    /* Button styles */
+    .btn {
+        background-color: #f70;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.5s;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .btn:hover {
+        background-color: #e05f00;
+        letter-spacing: 1px;
+    }
+    
+    /* Active page indicator */
+    .nav-links a.active {
+        color: #f70 !important;
+        font-weight: bold;
+        position: relative;
+    }
+    
+    .nav-links a.active::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #f70;
+    }
+    </style>
+    
     <div class="logo">🍽️Resturant</div>
     <ul class="nav-links">
         <li><a href="Homepage.html"><i class="fas fa-home"></i> Home</a></li>
