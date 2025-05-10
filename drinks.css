@@ -2,7 +2,7 @@ body{
     background-color: antiquewhite;
 }
 
-.logo{
+.logodrinks{
     text-align: center;
     background-color: rgb(244, 202, 169);
     color: rgb(219, 93, 3);
@@ -12,11 +12,11 @@ body{
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
     box-shadow: 1px 4px 10px 3px rgb(231, 124, 124) ;
-    margin: 20px 300px 30px 300px;
+    margin: 120px 300px 30px 300px;
     
     
    }
-   .logo:hover{
+   .logodrinks:hover{
     letter-spacing: 1px;
     color: rgb(171, 15, 15);
   
