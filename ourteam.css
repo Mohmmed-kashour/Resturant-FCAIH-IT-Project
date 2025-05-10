@@ -1,56 +1,65 @@
+/* استيراد الخطوط من Google Fonts: خطين - Pacifico و Quicksand */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
 
+/* تنسيق عام لصفحة الويب */
 body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-  background: #e0f7fa; 
+  margin: 0; /* إزالة الهوامش */
+  font-family: 'Quicksand', sans-serif; /* تحديد الخط */
+  background: #e0f7fa; /* لون خلفية ناعم أزرق فاتح */
 }
 
+/* تنسيق الهيدر */
 header {
-  text-align: center;
-  margin: 30px 0 50px;
+  text-align: center; /* توسيط العنوان */
+  margin: 30px 0 50px; /* هوامش من الأعلى والأسفل */
 }
 
 header h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.8rem;
-  color: #4caf50; 
-  letter-spacing: 1px;
+  font-family: 'Pacifico', cursive; /* استخدام خط Pacifico */
+  font-size: 2.8rem; /* حجم الخط */
+  color: #4caf50; /* أخضر زاهي */
+  letter-spacing: 1px; /* مسافة بين الحروف */
 }
 
+/* الحاوية الرئيسية للسلايدر */
 .slider-container {
   position: relative;
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
+  width: 90%; /* عرض 90% من الشاشة */
+  margin: 0 auto; /* توسيط الحاوية */
+  overflow: hidden; /* إخفاء أي محتوى يخرج خارج الحاوية */
 }
 
+/* تغليف الكروت */
 .card-wrapper {
-  display: flex;
-  transition: transform 0.5s ease;
+  display: flex; /* عرض الكروت جنب بعض */
+  transition: transform 0.5s ease; /* تحريك ناعم */
 }
 
+/* تصميم كل كارت */
 .card {
-  background: #fff; 
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.15); 
-  margin: 0 20px;
-  flex: 0 0 calc(33.333% - 40px);
+  background: #fff; /* خلفية بيضاء */
+  border-radius: 20px; /* زوايا دائرية */
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.15); /* ظل ناعم وردي */
+  margin: 0 20px; /* مسافة بين الكروت */
+  flex: 0 0 calc(33.333% - 40px); /* عرض كل كارت 1/3 من الحاوية */
   text-align: center;
   padding-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التحويم */
 }
 
+/* تأثير عند تحريك الفأرة فوق الكارت */
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3); 
+  transform: translateY(-10px); /* رفع الكارت لأعلى */
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3); /* ظل أقوى */
 }
 
+/* صورة العضو داخل الكارت */
 .card-image img {
-  width: 100%;
-  border-radius: 20px 20px 0 0;
+  width: 100%; /* عرض كامل */
+  border-radius: 20px 20px 0 0; /* زوايا علوية دائرية فقط */
 }
 
+/* تنسيق اسم العضو */
 .name {
   margin: 15px 0 5px;
   font-size: 1.4rem;
@@ -58,12 +67,14 @@ header h1 {
   color: #333;
 }
 
+/* وصف العضو (الوظيفة) */
 .description {
   color: #666;
   font-size: 1rem;
   margin-bottom: 10px;
 }
 
+/* تنسيق أيقونات السوشيال ميديا */
 .social-icons a {
   color: #555;
   margin: 0 8px;
@@ -72,11 +83,13 @@ header h1 {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* تأثير عند تحريك الفأرة على أيقونة */
 .social-icons a:hover {
-  color: #54d6f9;
-  transform: scale(1.2);
+  color: #54d6f9; /* لون أزرق فاتح */
+  transform: scale(1.2); /* تكبير */
 }
 
+/* السهام على اليمين واليسار */
 .arrow { 
   position: absolute;
   top: 50%;
@@ -91,25 +104,30 @@ header h1 {
   transition: background 0.3s, transform 0.3s;
 }
 
+/* تأثير السهم عند التحويم */
 .arrow:hover {
   background: #4caf50;
   color: white;
   transform: scale(1.2);
 }
 
+/* موقع سهم الرجوع */
 #prevBtn {
   left: -30px;
 }
 
+/* موقع سهم التقديم */
 #nextBtn {
   right: -30px;
 }
 
+/* حاوية النقاط اللي بتحدد مكان الكارت النشط */
 .dots {
   text-align: center;
   margin-top: 25px;
 }
 
+/* شكل النقاط */
 .dots span {
   display: inline-block;
   width: 14px;
@@ -121,22 +139,27 @@ header h1 {
   transition: background 0.3s;
 }
 
+/* النقطة النشطة */
 .dots span.active {
   background: #4caf50;
 }
 
-/* for making page Responsive */
+/* ---------- تنسيقات الشاشات الصغيرة (Responsive) ---------- */
+
+/* لو الشاشة أقل من 1024px: خلي كل كارت ياخد نصف العرض */
 @media (max-width: 1024px) {
   .card {
     flex: 0 0 calc(50% - 40px);
   }
 }
 
+/* لو الشاشة أقل من 768px: خلي كل كارت ياخد كل العرض */
 @media (max-width: 768px) {
   .card {
     flex: 0 0 calc(100% - 40px);
   }
 
+  /* تغيير موقع الأسهم للأسفل بدل الجوانب */
   #prevBtn, #nextBtn {
     left: 0;
     right: 0;
