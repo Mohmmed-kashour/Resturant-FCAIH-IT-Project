@@ -1,3 +1,18 @@
+body {
+    padding-top: 70px; 
+    background-color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
 body{
     background-color: antiquewhite;
 }
