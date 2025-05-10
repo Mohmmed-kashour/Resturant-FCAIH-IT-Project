@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Lover menu</title>
+   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="menu.js"></script>
+</head>
+
+<body>
+ <!-- مكان تحميل الناف بار -->
+       <div id="navbar-placeholder"></div>
+  <div class="container">
+    <h2 id="menu-title">Our Menu</h2>
+
+    <!-- Add this search box below the menu title in your HTML -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search menu items...">
+      <button id="searchButton">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Add this new section for search results -->
+    <div class="menu-category" data-category="searchResults" id="searchResults" style="display: none;">
+      <h3>Search Results</h3>
+      <ul class="ul-items" id="searchResultsList">
+        <!-- Search results will be added here dynamically -->
+      </ul>
+    </div>
+    
+    <!-- Menu Items -->
+    <div class="menu-items">
+
+      <!-- Appetizers Button -->
+      <button class="category-button" data-category="appetizers">
+        <h3>Appetizers</h3>
+        <i class="fas fa-bowl-food"></i>
+      </button>
+
+      <!-- Main Courses Button -->
+      <button class="category-button" data-category="mainCourse">
+        <h3>Main Courses</h3>
+        <i class="fa-solid fa-utensils"></i>
+      </button>
+
+      <!-- Desserts Button -->
+      <a href="menu2.html"><button class="category-button" data-category="dessert" >
+        <h3>Desserts & Drinks</h3>
+        <i class="fa-solid fa-cheese"></i>
+      </button></a>
+
+      <!-- Cart Button -->
+      <button onclick="alert('press OK to Complete your purchase'); completePurchase()" class="cart">
+        <h3>cart </h3>
+        <i class="fas fa-shopping-cart"></i>
+        <span id="itemsInCart">0</span>
+      </button>
+
+    </div>
+
+
+    <!-- Appetizers -->
+    <div class="menu-category" data-category="appetizers" id="default" style="display: block;">
+      <h3>Appetizers</h3>
+      <ul class="ul-items">
+
+        <!-- Apptizers Item 1 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Bruschetta $8</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Toasted bread with tomato, basil, and garlic</p>
+          <img src="photos/Bruschetta.jfif" alt="Bruschetta">
+        </div>
+
+        <!-- Apptizers Item 2 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Spinach and Artichoke Dip $10</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Creamy dip with spinach, artichokes, and Parmesan</p>
+          <img src="photos/Spinach and Artichoke Dip.jfif" alt="Spinach and Artichoke Dip">
+        </div>
+
+        <!-- Apptizers Item 3 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Mozzarella Sticks $9</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Crispy breaded mozzarella sticks with marinara sauce</p>
+          <img src="photos/Mozzarella Sticks.webp" alt="Mozzarella Sticks">
+        </div>
+
+        <!-- Apptizers Item 4 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Chicken Wings $12</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Crispy fried chicken wings with your choice of sauce</p>
+          <img src="photos/Chicken Wings.jpg" alt="Chicken Wings">
+        </div>
+
+        <!-- Apptizers Item 5 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Garlic Bread $6</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Toasted garlic bread with herb butter</p>
+          <img src="photos/Garlic Bread.webp" alt="Garlic Bread">
+        </div>
+
+        <!-- Apptizers Item 6 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Buffalo Chicken Dip $11</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Creamy dip with shredded chicken, buffalo sauce, and blue cheese</p>
+          <img src="photos/Buffalo Chicken Dip.jpg" alt="Buffalo Chicken Dip">
+        </div>
+
+      </ul>
+    </div>
+
+
+    <!-- Main Courses -->
+    <div class="menu-category" data-category="mainCourse">
+      <h3>Main Courses</h3>
+      <ul class="ul-items">
+
+        <!-- Main Courses Item 1 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Spaghetti Carbonara $15</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Spaghetti with eggs, hard cheese, pancetta, and black pepper</p>
+          <img src="photos/Spaghetti Carbonara.jfif" alt="Spaghetti Carbonara">
+        </div>
+
+        <!-- Main Courses Item 2 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Grilled Salmon $20</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Fresh salmon fillet with lemon and herbs</p>
+          <img src="photos/Grilled Salmon.jfif" alt="Grilled Salmon">
+        </div>
+
+        <!-- Main Courses Item 3 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Chicken Parmesan $16</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Breaded chicken cutlet with marinara sauce and mozzarella cheese</p>
+          <img src="photos/Chicken Parmesan.webp" alt="Chicken Parmesan">
+        </div>
+
+        <!-- Main Courses Item 4 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Steak and Fries $22</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Grilled steak with french fries</p>
+          <img src="photos/Steak and Fries.webp" alt="Steak and Fries">
+        </div>
+
+        <!-- Main Courses Item 5 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Burger and Fries $14</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Beef patty with lettuce, tomato, and onion, served with french fries</p>
+          <img src="photos/Burger and Fries.jfif" alt="Burger and Fries">
+        </div>
+
+        <!-- Main Courses Item 6 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Pasta Primavera $17</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Pasta with seasonal vegetables and a light sauce</p>
+          <img src="photos/Pasta Primavera.webp" alt="Pasta Primavera">
+        </div>
+
+        <!-- Main Courses Item 7 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Lasagna $18</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Layers of pasta, meat sauce, and cheese</p>
+          <img src="photos/Lasagna.jfif" alt="Lasagna">
+        </div>
+
+        <!-- Main Courses Item 8 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Fish and Chips $19</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Crispy battered fish with french fries</p>
+          <img src="photos/Fish and Chips.jfif" alt="Fish and Chips">
+        </div>
+
+        <!-- Main Courses Item 9 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Chicken Caesar Salad $15</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Romaine lettuce with grilled chicken, parmesan cheese, and caesar dressing</p>
+          <img src="photos/Chicken Caesar Salad.png" alt="Chicken Caesar Salad">
+        </div>
+
+        <!-- Main Courses Item 10 -->
+        <div class="menu-item-box">
+          <li>
+            <h4>Pizza $16</h4>
+          </li>
+          <button onclick="addToCart(); alert('Done!&#x1F44D;')" class="cart-btn">add to cart</button>
+          <p>Grilled Sausage & Pepperoni Neapolitan Pizza</p>
+          <img src="photos/Pizza.jpg" alt="Pizza">
+        </div>
+
+      </ul>
+    </div>
+
+  </div>
+  <script>
+        // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+        fetch('navbar.html')
+    
+            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+            .then(res => res.text())
+    
+            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

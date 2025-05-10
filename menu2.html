@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <!-- main template css file -->
+    <link rel="stylesheet" href="menu2.css">
+    
+    
+</head>
+<body>
+       <!-- مكان تحميل الناف بار -->
+    <div id="navbar-placeholder"></div>
+     <header>
+       <p class="logo"> Menu - Food & Drinks & Desserts & Appetizers</p>
+     </header>
+    <div class="sectiondrinks">
+    
+        <a href="drinks.html"><img title="this is drinks section" src="images menu2/مشاريب.jpg" alt=""></a>
+        <a class="secdrinks" href="drinks.html"> <p>Drinks section</p></a>
+    </div>
+    <div class="sectiondesserts">
+        
+        <a href="desserts.html"><img title="this is desserts section" src="images menu2/حلويات.jpg" alt=""></a>
+        <a class="secsweets" href="desserts.html"><p>Desserts section</p></a>
+    </div>
+    <div class="sectionfoods">
+        
+        <a href="menu.html"><img title="this is food section" src="images menu2/الطعام.jpg" alt=""></a>
+        <a class="secfoods" href="menu.html"><p>Food section</p></a>
+    </div>
+    <script>
+        // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+        fetch('navbar.html')
+    
+            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+            .then(res => res.text())
+    
+            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>    
+</body>
+</html>
+
+    
+    
+

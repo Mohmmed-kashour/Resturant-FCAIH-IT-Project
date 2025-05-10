@@ -1,0 +1,122 @@
+
+/* Apply background image */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-image: url("imgtable/AdobeStock_324727233_Preview.jpeg");
+  background-size: cover;
+}
+
+/* Container for the form */
+.booking-container {
+  background: rgba(30, 30, 30, 0.85);
+  padding: 2.5rem 3rem;
+  margin: 250px 0 0 500px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on the container */
+.booking-container:hover {
+  transform: scale(1.02);
+}
+
+/* Heading */
+.booking-container h1 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ffb347;
+  font-weight: bold;
+  user-select: text;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  user-select: text;
+}
+
+/* Inputs and select */
+input, select {
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  background: #222;
+  color: #fff;
+  transition: all 0.3s ease;
+  user-select: text;
+}
+
+/* Hover and focus effects */
+input:focus, select:focus {
+  box-shadow: 0 0 8px 2px #ffb347;
+  background: #333;
+}
+
+input:hover, select:hover {
+  background: #444;
+}
+
+/* Select styling */
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #ffb347 50%),
+    linear-gradient(135deg, #ffb347 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  padding-right: 3rem;
+}
+
+/* Submit button */
+button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 30px;
+  border: none;
+  background: #ffb347;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 179, 71, 0.6);
+  user-select: none;
+}
+
+/* Button hover/focus */
+button:hover {
+  background-color: #ffa500;
+  transform: scale(1.05);
+}
+
+/* Button active */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 450px) {
+  .booking-container {
+      padding: 2rem 1.2rem;
+  }
+}

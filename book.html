@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservation</title>
+   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="book.css" />
+</head>
+<body>
+  
+<!-- مكان تحميل الناف بار -->
+    <div id="navbar-placeholder"></div>
+ 
+
+  <section class="booking-container" aria-label="Table booking form">
+    <form>
+      <div>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your full name" required autocomplete="name" />
+      </div>
+
+      <div>
+        <label for="date">Reservation Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div>
+        <label for="time">Reservation Time</label>
+        <input type="time" id="time" name="time" min="17:00" max="23:00" required />
+      </div>
+
+      <div>
+        <label for="guests">Number of Guests</label>
+        <select id="guests" name="guests" required>
+          <option value="" disabled selected>Select guests</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5+">5+</option>
+        </select>
+      </div>
+
+      <button onclick="alert('Your reservation is submitted &#x1F44D;')" class="submit-btn">Reserve Now</button>
+    </form>
+  </section>
+
+  <script src="booking.js"></script>
+      <script>
+        // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+        fetch('navbar.html')
+    
+            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+            .then(res => res.text())
+    
+            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+    
+</body>
+</html>

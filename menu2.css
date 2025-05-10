@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+ }
+ body{
+    background-color: antiquewhite;
+ }
+ .sectiondrinks, .sectiondesserts{
+   background-color: rgb(244, 210, 182);
+   margin: 27px 208px 27px 220px;
+   padding: 10px;
+   display: inline-block;
+   transition: 1s;
+   box-shadow: 1px 2px 20px 4px rgb(234, 105, 105) ;
+   border-radius: 50px;
+ }
+ .img1,.img2{
+  width: 280px;
+  height: 223px;
+  border-radius: 50px;
+  margin: 30px 200px 30px 20;
+ }
+ .img3{
+  width: 275px;
+  height: 223px;
+  border-radius: 50px;
+
+ }
+ div:hover{
+  scale: 1.05;
+}
+ .logo{
+  text-align: center;
+  background-color: rgb(244, 202, 169);
+  color: rgb(219, 93, 3);
+  font-weight: bold;
+  font-size: 32.5px;
+  transition: 0.5s;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  box-shadow: 1px 2px 10px 3px rgb(236, 108, 108) ;
+  margin: 16px 300px 10px 290px;
+  
+  
+ }
+ .logo:hover{
+  letter-spacing: 1px;
+  color: rgb(171, 15, 15);
+
+ }
+ div  p{
+  border-width: 20px ;
+  color:  rgb(144, 111, 215);
+  font-weight: bold;
+  font-size: 22.4px;
+  transition: 0.5s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  text-align: center;
+  
+ }
+ div p:hover{
+  letter-spacing: 1px;
+  color:rgb(241, 17, 17);
+ }
+ .secdrinks,.secsweets,.secfoods{
+   text-decoration: none;
+ }
+ .sectionfoods{
+  
+  background-color: rgb(244, 210, 182);
+  padding: 9px;
+  text-align: center;
+  margin: 0 596px 0 600px;
+  transition: 1s;
+  box-shadow: 1px 2px 20px 4px rgb(234, 105, 105) ;
+  border-radius: 50px;
+ }
+ 

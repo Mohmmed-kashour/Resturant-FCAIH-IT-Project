@@ -1,0 +1,79 @@
+body{
+    /* background-image: linear-gradient(to right,orange,yellow); */
+    background-color: antiquewhite;
+}
+
+.logo{
+    text-align: center;
+    background-color: rgb(244, 202, 169);
+    color: rgb(219, 93, 3);
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.5s;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 1px 4px 10px 3px rgb(231, 124, 124) ;
+    margin: 20px 300px 30px 300px;
+    
+    
+   }
+   .logo:hover{
+    letter-spacing: 1px;
+    color: rgb(171, 15, 15);
+  
+   }
+div{
+    margin: 30px 65px 30px 65px;
+    background-color: white;
+    box-shadow: 1px 2px 30px 5px orange ;
+    border-radius: 30px 90px 30px 90px;
+    overflow: hidden;
+    padding: 8px;
+    text-align: center;
+    transition: 1s;
+    font-family: cursive;
+    font-style: italic;
+    display: inline-block;
+    
+}
+div button{
+    cursor: pointer;
+}
+
+img{
+    width: 225px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.8s;
+    
+}
+
+.item:hover{ 
+   
+    scale:1.05;
+}
+  
+.buy{
+   
+}
+#invoice{
+    border-radius: 30px;
+    display: inline-block;
+}
+.buy{
+    text-decoration-line: none;
+    color: rgb(246, 246, 248);
+    transition: 0.3s;
+    font-size: 19px;
+    padding: 2px;
+    box-shadow: 0 0 5px 0.5px rgb(29, 18, 247) ;
+    background-color: rgb(15, 15, 251);
+    margin: 5px;
+    
+}
+.buy:hover{
+  letter-spacing: 1px;
+  
+}
+
+

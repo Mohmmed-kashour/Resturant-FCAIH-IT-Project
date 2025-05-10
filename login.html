@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: arial, sans-serif;
+            color: azure;
+            background-color: black;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            background-image: url(img/pepsi-jj.jpg);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .main-contain {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .login-box {
+            width: 50%;
+            padding: 2rem;
+            display: flex;
+            margin: auto;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-containt {
+            border: 1px solid gray;
+            padding: 20px;
+            width: 50%;
+            background-color: rgba(21, 20, 20, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-box form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-box input[type="email"],
+        .login-box input[type="password"] {
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+
+        .submit {
+            background-color: rgb(247, 103, 31);
+            width: 170px;
+            padding: 10px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        
+
+        a {
+            color: azure;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <title>Login</title>
+</head>
+
+<body>
+     <!-- مكان تحميل الناف بار -->
+    <div id="navbar-placeholder"></div>
+    <div class="main-contain">
+        <div class="login-box">
+            <div class="login-containt">
+                <h1>Login</h1>
+                <form id="myForm">
+                    <label for="Email">Email</label>
+                    <input id="Email" type="email" placeholder="Enter your Email">
+                    <div id="emailError" class="error"></div>
+
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter your password">
+                    <div id="passwordError" class="error"></div>
+
+                    <a href="./contact.html">Forget password?</a>
+
+                    <input type="submit" value="Sign In" class="submit">
+
+                    <a href="register.html">Register</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
+
+            let valid = true;
+
+            const email = document.getElementById("Email").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required.";
+                valid = false;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById("emailError").innerText = "Enter a valid email.";
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+                valid = false;
+            }
+
+            if (valid) {
+                alert("Form is valid and ready to be submitted!");
+            }
+                 // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+        fetch('navbar.html')
+    
+            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+            .then(res => res.text())
+    
+            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            }
+    
+        });
+    </script>
+     <script>
+    // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+    fetch('navbar.html')
+
+        // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+        .then(res => res.text())
+
+        // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+</script>
+
+      
+</body>
+
+</html>
+
+
+
