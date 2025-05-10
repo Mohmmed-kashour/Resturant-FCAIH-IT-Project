@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>resturant abdalghany</title>
     <!-- main template css file -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="drinks.css">
     <script src="drinks.js"></script>
 
 </head>
 <body>
+    <div id="navbar-placeholder"></div>
     <header>
       <p class="logo">The Drinks Menu</p>
     </header>
@@ -82,7 +84,19 @@
       <!-- <button id="printBtn" onclick="window.print()">طباعة الفاتورة</button> زر الطباعة -->
       <p> <a class="buy" href="javascript:alert('Purchase completed');">buy now</a></p>
   </div>
-  
+    
+  <script>
+        // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
+        fetch('navbar.html')
+    
+            // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
+            .then(res => res.text())
+    
+            // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
    
     
 </body>
