@@ -4,7 +4,7 @@
  }
  .sectiondrinks, .sectiondesserts{
    background-color: rgb(244, 210, 182);
-   margin: 27px 208px 27px 220px;
+/*    margin: 27px 208px 27px 220px; */
    padding: 10px;
    display: inline-block;
    transition: 1s;
@@ -67,7 +67,7 @@
   background-color: rgb(244, 210, 182);
   padding: 9px;
   text-align: center;
-  margin: 0 596px 0 600px;
+/*   margin: 0 596px 0 600px; */
   transition: 1s;
   box-shadow: 1px 2px 20px 4px rgb(234, 105, 105) ;
   border-radius: 50px;
