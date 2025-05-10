@@ -17,6 +17,22 @@
   <div class="container">
     <h2 id="menu-title">Our Menu</h2>
 
+    <!-- Add this search box below the menu title in your HTML -->
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search menu items...">
+  <button id="searchButton">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+ <!-- Add this new section for search results -->
+<div class="menu-category" data-category="searchResults" id="searchResults" style="display: none;">
+  <h3>Search Results</h3>
+  <ul class="ul-items" id="searchResultsList">
+    <!-- Search results will be added here dynamically -->
+  </ul>
+</div>
+
     
     <!-- Add this new section for search results -->
 <div class="menu-category" data-category="searchResults" id="searchResults" style="display: none;">
