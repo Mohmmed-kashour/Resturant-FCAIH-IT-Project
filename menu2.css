@@ -1,4 +1,4 @@
-*{
+ *{
   margin: 0;
   padding: 0;
  }
@@ -18,7 +18,7 @@
   width: 280px;
   height: 223px;
   border-radius: 50px;
-  margin: 30px 200px 30px 20;
+  margin: 30px 200px 30px 200;
  }
  .img3{
   width: 275px;
@@ -73,7 +73,8 @@
   text-align: center;
   margin: 0 596px 0 600px;
   transition: 1s;
-  box-shadow: 1px 2px 20px 4px rgb(234, 105, 105) ;
+  box-shadow: 0 3px 20px 4px rgb(234, 105, 105) ;
   border-radius: 50px;
  }
+ 
  
