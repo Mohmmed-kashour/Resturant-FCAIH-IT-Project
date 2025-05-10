@@ -1,4 +1,4 @@
- *{
+*{
   margin: 0;
   padding: 0;
  }
@@ -18,7 +18,7 @@
   width: 280px;
   height: 223px;
   border-radius: 50px;
-  margin: 30px 200px 30px 200;
+  margin: 30px 200px 30px 20;
  }
  .img3{
   width: 275px;
@@ -29,7 +29,7 @@
  div:hover{
   scale: 1.05;
 }
- .logo{
+ .logomenu{
   text-align: center;
   background-color: rgb(244, 202, 169);
   color: rgb(219, 93, 3);
@@ -43,7 +43,7 @@
   
   
  }
- .logo:hover{
+ .logomenu:hover{
   letter-spacing: 1px;
   color: rgb(171, 15, 15);
 
@@ -73,8 +73,7 @@
   text-align: center;
   margin: 0 596px 0 600px;
   transition: 1s;
-  box-shadow: 0 3px 20px 4px rgb(234, 105, 105) ;
+  box-shadow: 1px 2px 20px 4px rgb(234, 105, 105) ;
   border-radius: 50px;
  }
- 
  
