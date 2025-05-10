@@ -52,7 +52,7 @@ div button{
 }
 img{
     width: 220px;
-    height: 200px;
+    height: 193px;
     border-radius: 50%;
     transition: 0.8s;
     
@@ -63,6 +63,9 @@ img{
 #invoice{
     border-radius: 30px;
     display: inline-block;
+    position: fixed;
+    top: 250px;
+    right: 0;
 }
 .buy{
     text-decoration-line: none;
