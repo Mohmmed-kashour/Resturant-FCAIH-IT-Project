@@ -1,7 +1,7 @@
 body{
     background-color: antiquewhite;
 }
-.logo{
+.logodesserts{
     text-align: center;
     background-color: rgb(244, 202, 169);
     color: rgb(219, 93, 3);
@@ -13,7 +13,7 @@ body{
     box-shadow: 1px 4px 10px 3px rgb(231, 124, 124) ;
     margin: 20px 320px 25px 320px;
    }
-   .logo:hover{
+   .logodesserts:hover{
     letter-spacing: 1px;
     color: rgb(171, 15, 15);
   
