@@ -1,34 +1,25 @@
+/* بادي عاملة زيرو عشان ميبقاش في مسافات فاضية */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}.hero {
-  background-image: url("imghome/food-photography-background.jpg.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-repeat: no-repeat; /* Prevents repetition */
 }
 
+/* مخلي الصفحة تملى الشاشة بالظبط ومنع السكرول */
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* ستايل عام للصفحة */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   color: white;
-  background-color: #f8f8f8; }/* Light background for non-hero sections *
+  background-color: #f8f8f8;
+}
 
-
-
-/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-
   top: 0;
   left: 0;
   width: 100%;
@@ -36,29 +27,31 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 20px 45px;
-  background-color: #333333;
-  color: white;
+  background-color: #333;
   z-index: 1000;
 }
 
-
-.navbar .logo {
+/* اللوجو بتاع الموقع */
+.logo {
   font-size: 39px;
   font-weight: bold;
-  color: #ff7700;
+  color: #f70;
   transition: 0.5s;
 }
 
-.navbar .logo:hover {
+/* اللوجو بيتحرك شوية لما الماوس يعدي عليه */
+.logo:hover {
   letter-spacing: 1px;
 }
 
+/* لينكات البار العلوي */
 .nav-links {
   display: flex;
   gap: 50px;
   list-style: none;
 }
 
+/* لينكات البار العلوي */
 .nav-links a {
   text-decoration: none;
   font-weight: bold;
@@ -66,41 +59,48 @@ width: 100%;
   transition: 0.5s;
 }
 
+/* لينكات البار بتتغير لما الماوس يعدي */
 .nav-links a:hover {
-  color: #ff7700;
+  color: #f70;
   letter-spacing: 1.5px;
 }
 
-/* Enhanced dropdown styling */
+/* DROPDOWN postioning */
 .dropdown {
   position: relative;
 }
 
+/* محتوى القائمة المنسدلة */
 .dropdown-content {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  background-color: #4a4a4a; /* Changed from #3e4459 to lighter gray */
+  top: 100%; /* Positions below the "Menu" link */
+  left: 0;
+  background-color: #4a4a4a;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
   border-radius: 8px;
   padding: 12px 0;
   z-index: 1;
   transform: translateY(20px);
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
+/* لما الماوس يعدي على القائمة تبان */
 .dropdown:hover .dropdown-content {
   visibility: visible;
   opacity: 1;
   transform: translateY(10px);
 }
 
+/* عناصر القائمة المنسدلة */
 .dropdown-content li {
   list-style: none;
   padding: 8px 16px;
 }
 
+/* لينكات القائمة المنسدلة */
 .dropdown-content li a {
   display: block;
   color: white;
@@ -108,14 +108,15 @@ width: 100%;
   transition: 0.3s;
 }
 
+/* لينكات القائمة المنسدلة لما الماوس يعدي */
 .dropdown-content li a:hover {
-  color: #ff7700;
+  color: #f70;
   padding-left: 5px;
 }
 
-/* Button styling */
+/* الزرارات البرتقالية */
 .btn {
-  background-color: #ff7700;
+  background-color: #f70;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -123,154 +124,64 @@ width: 100%;
   cursor: pointer;
   font-weight: bold;
   transition: 0.5s;
-  text-decoration: none;
-   box-shadow: 0 5px 15px rgba(255, 179, 71, 0.6);
 }
 
+/* الزرار لما الماوس يعدي عليه */
 .btn:hover {
   background-color: #e05f00;
   letter-spacing: 1px;
 }
 
-/* Table booking modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: auto;
-}
-
-.modal-content {
-  background-color: #333333; /* Changed from #2d3142 to dark gray */
-  margin: 15% auto;
-  padding: 30px;
-  border: 1px solid #555555; /* Changed from #4c5474 to medium gray */
-  width: 60%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  animation: modalOpen 0.5s;
-}
-
-@keyframes modalOpen {
-  from {opacity: 0; transform: translateY(-50px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-.modal-title {
-  color: #ff7700;
-  margin-bottom: 20px;
-}
-
-.close-btn {
-  color: #bbb;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.close-btn:hover {
-  color: #ff7700;
-}
-
-.form-group {
-  margin: 15px 0;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #eee;
-}
-
-.form-group input, .form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #555555; /* Changed from #4c5474 to medium gray */
-  background-color: #4a4a4a; /* Changed from #3e4459 to lighter gray */
-  color: white;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.form-group input:focus, .form-group select:focus {
-  outline: none;
-  border-color: #ff7700;
-  box-shadow: 0 0 5px rgba(255,119,0,0.5);
-}
-
-.submit-btn {
-  width: 100%;
-}
-
-/* Hero section */
+/* الجزء الرئيسي في الصفحة */
 .hero {
+  background: url("imghome/food-photography-background.jpg.jpg") center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding-top: 50px;
 }
 
+/* طبقة شفافة فوق الصورة الخلفية */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
   z-index: 0;
 }
 
+/* النص الرئيسي في وسط الصفحة */
 .hero-text {
   position: relative;
   z-index: 1;
 }
 
+/* عنوان الصفحة الرئيسي */
 .hero-text h1 {
   font-weight: bold;
   font-size: 60px;
   margin-bottom: 20px;
-  color: #ff7700;
+  color: #f70;
   transition: 0.5s;
 }
 
+/* العنوان لما الماوس يعدي عليه */
 .hero-text h1:hover {
   letter-spacing: 1px;
 }
 
+/* الوصف تحت العنوان */
 .hero-text p {
   font-size: 28px;
   margin-bottom: 20px;
 }
-
+/* FOOTER (NO CHANGES) */
 footer {
-  background-color: #333333; /* Changed from #2d3142 to dark gray */
+  background-color: #333;
   padding: 20px;
   text-align: center;
   color: white;
-}
-
-/* Menu title animation */
-@keyframes glow {
-  0% { text-shadow: 0 0 5px rgba(255,119,0,0.5); }
-  50% { text-shadow: 0 0 20px rgba(255,119,0,0.8); }
-  100% { text-shadow: 0 0 5px rgba(255,119,0,0.5); }
-}
-
-.menu-title {
-  position: relative;
-  cursor: pointer;
-}
-
-.menu-title.highlight {
-  animation: glow 1.5s infinite;
-  color: #ff7700;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
 }
