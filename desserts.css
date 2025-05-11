@@ -57,6 +57,12 @@ img{
     transition: 0.8s;
     
 }
+.item p,
+.item b,
+.item del,
+.item mark {
+  color:black;
+}
 .item:hover{ 
    scale:1.05;
 }
