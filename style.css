@@ -31,7 +31,6 @@ body {
   z-index: 1000;
 }
 
-/* اللوجو بتاع الموقع */
 .logo {
   font-size: 39px;
   font-weight: bold;
@@ -44,14 +43,12 @@ body {
   letter-spacing: 1px;
 }
 
-/* لينكات البار العلوي */
 .nav-links {
   display: flex;
   gap: 50px;
   list-style: none;
 }
 
-/* لينكات البار العلوي */
 .nav-links a {
   text-decoration: none;
   font-weight: bold;
@@ -70,7 +67,7 @@ body {
   position: relative;
 }
 
-/* محتوى القائمة المنسدلة */
+/*القايمة اللي بتنزل لما تشاور بالماوس على المنيو*/
 .dropdown-content {
   visibility: hidden;
   opacity: 0;
@@ -87,20 +84,18 @@ body {
   transition: all 0.3s;
 }
 
-/* لما الماوس يعدي على القائمة تبان */
+/*لما الماوس يعدي على القائمة و خليت ال opacity ب 1 عشان تبقى ظاهرة مش شفافة */
 .dropdown:hover .dropdown-content {
   visibility: visible;
   opacity: 1;
   transform: translateY(10px);
 }
 
-/* عناصر القائمة المنسدلة */
 .dropdown-content li {
   list-style: none;
   padding: 8px 16px;
 }
 
-/* لينكات القائمة المنسدلة */
 .dropdown-content li a {
   display: block;
   color: white;
@@ -108,13 +103,11 @@ body {
   transition: 0.3s;
 }
 
-/* لينكات القائمة المنسدلة لما الماوس يعدي */
 .dropdown-content li a:hover {
   color: #f70;
   padding-left: 5px;
 }
 
-/* الزرارات البرتقالية */
 .btn {
   background-color: #f70;
   color: white;
@@ -132,7 +125,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* الجزء الرئيسي في الصفحة */
+/* الجزء الرئيسي في الصفحة  */
 .hero {
   background: url("imghome/food-photography-background.jpg.jpg") center/cover no-repeat;
   height: 100vh;
