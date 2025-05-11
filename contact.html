@@ -2,102 +2,95 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8"> <!-- عشان احدد اللغه -->
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- عشان يشتغل على الموبايل والشاشات الصغيره -->
-    <title>Contact Us Form</title><!-- عنوان الصفحه -->
-    <link rel="stylesheet" href="contact.css"><!-- لربط ال css ب ال html -->
-     <link rel="stylesheet" href="style.css"> <!--عشان الناف بار تاخد نفس التنسيقات بتاع الhome page  -->
+    <title>Contact Us Form</title>
+    <!-- CSS files for styling the page and navigation components -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome library for icons used throughout the page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- عشان نستخدم ال font aussm -->
 </head>
 
 <body>
-     <!-- مكان تحميل الناف بار -->
+    <!-- Navigation placeholder that will be populated via JavaScript -->
     <div id="navbar-placeholder"></div>
-    <!-- الحاويه الرئسيه للصفحه -->
+
+    <!-- Main contact page container with form and contact information sections -->
     <div class="contact-container">
 
-
-        <!-- الجزء الخاص بنمذج التواصل -->
+        <!-- Contact form section with fields for user input -->
         <div class="contact-form">
+            <h2 class="form-title">Get in Touch</h2>
+            <p class="form-subtitle">Feel free to drop us a line below!</p>
 
-            <h2 class="form-title">Get in Touch</h2><!-- عنوان الفورم -->
-            <p class="form-subtitle">Feel free to drop us a line below!</p><!-- وصف بسيط -->
-
-            <form><!-- بداية الفورم اللى فيه خانات الادخال -->
-
+            <form>
+                <!-- Form input groups for name, email and message -->
                 <div class="form-group">
-                    <input type="text" placeholder="Your Name" required><!-- خانه ادخال الاسم -->
+                    <input type="text" placeholder="Your Name" required>
                 </div>
 
                 <div class="form-group">
-                    <input type="email" placeholder="Your Email" required><!-- خانه ادخال الايميل  -->
+                    <input type="email" placeholder="Your Email" required>
                 </div>
 
                 <div class="form-group">
-                    <textarea placeholder="Typing your message here...." required></textarea><!-- خانة الرساله -->
-
+                    <textarea placeholder="Typing your message here...." required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">SEND</button><!--زر الارسال -->
+
+                <button type="submit" class="submit-btn">SEND</button>
             </form>
         </div>
 
-        <!-- الجزء الخاص بمعلومات التواصل الثابته -->
+        <!-- Contact information section with company details and icons -->
         <div class="contact-info">
-            <h2>Contact Us</h2><!-- عنوان القسم  -->
+            <h2>Contact Us</h2>
 
-            <!-- عنصر عنوان المكان  -->
+            <!-- Contact information items each with icon and text -->
             <div class="info-item">
                 <div class="icon">
-                    <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i><!-- ايقونه المكان  -->
+                    <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
                 </div>
 
                 <div>
-                    <div>32, Avenue ve Newyork</div><!-- سطر العنوا الاول -->
-                    <div>321994 Newyork</div><!--سطر العنوان التانى -->
+                    <div>32, Avenue ve Newyork</div>
+                    <div>321994 Newyork</div>
                 </div>
             </div>
 
-            <!-- عنصر البريد الالكترونى -->
             <div class="info-item">
                 <div class="icon">
-                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i><!-- ايقونة الايميل -->
+                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
                 </div>
-                <div>hello@loremipsum.com</div><!-- الايميل -->
+                <div>hello@loremipsum.com</div>
             </div>
 
-            <!-- عنصر رقم التليفون -->
             <div class="info-item">
                 <div class="icon">
-                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i><!-- ايقونه الموبايل -->
+                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
                 </div>
-                <div>+3356 1589 2105</div><!-- رقم الهاتف -->
+                <div>+3356 1589 2105</div>
             </div>
 
-            <!-- رقم الفون الارضى او الفاكس -->
             <div class="info-item">
                 <div class="icon">
-                    <i class="fa-solid fa-print" style="color: #ffffff;"></i><!-- ايقونه الفاكس -->
+                    <i class="fa-solid fa-print" style="color: #ffffff;"></i>
                 </div>
-                <div>+3356 1589 2100</div><!-- رقم الفاكس -->
+                <div>+3356 1589 2100</div>
             </div>
         </div>
     </div>
+
+    <!-- JavaScript to dynamically load the navigation bar content -->
     <script>
-    // السطر ده بيستخدم دالة fetch عشان يجيب محتوى ملف اسمه 'navbar.html'
-    fetch('navbar.html')
-
-        // لما الملف يتجاب بنجاح، بيتحول لنص (text) باستخدام .text()
-        .then(res => res.text())
-
-        // بعد ما يتحول لنص، بنستخدمه ونحطه جوا العنصر اللي الـ id بتاعه 'navbar-placeholder'
-        .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-        });
-</script>
-
+        // Fetch and insert navbar HTML into the placeholder element
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>
